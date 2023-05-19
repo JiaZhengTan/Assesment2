@@ -39,11 +39,17 @@
   #name-lbl {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    margin-left: 43%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    padding-right: 180px;
+  }
+
+  #name-txt {
+    margin-left: auto;
     margin-right: auto;
     width: max-content;
   }
-
   input[type=text] {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -59,9 +65,10 @@
     padding-top: 5px;
     padding-bottom: 10px;
     color: red;
-    margin-left: 43%;
+    margin-left: auto;
     margin-right: auto;
     width: max-content;
+    padding-right: 110px;
   }
 
   button {
@@ -122,7 +129,7 @@
     <i>*Please insert a name.</i>
   </div>
 
-  <div id="name-lbl" style="margin-left: 42.9%;">
+  <div id="name-lbl" style="padding-right: 170px;">
     <p>Birthday</p>
   </div>
 
@@ -132,7 +139,7 @@
     <input style="text-align: center;" size="10px" maxlength="4" type="text" id="year" placeholder="YYYY">
   </div>
 
-  <div id="warn1">
+  <div id="warn1" style="padding-right: 85px;">
     <i>*Please insert your birthday</i>
   </div>
   </div>
@@ -145,11 +152,11 @@
     <input style="padding-left: 10px;" type="text" id="email" size="30" maxlength="30" placeholder="Email Address">
   </div>
 
-  <div id="warn1">
+  <div id="warn1" style="padding-right: 45px;">
     <p>*Please insert a valid email address</p>
   </div>
 
-  <div id="name-lbl" style="margin-bottom: 1%;">
+  <div id="name-lbl" style="margin-bottom: 2%; padding-left: 70px;">
     <input type="checkbox" id="checkbox" name="checkbox" value="no">
     <label style="font-size: 12px; font-style: italic; color: gray;" for="checkbox">No email address</label>
   </div>

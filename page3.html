@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<style>
+    body {
+        width: 100%;
+        height: auto;
+        font-family: Arial;
+    }
+
+    p {
+        line-height: 10px;
+    }
+
+    button {
+        background-color: #fe6601;
+        border: none;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 70px;
+        padding-right: 70px;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        border-radius: 30px;
+    }
+
+    #top {
+        font-family: 'Times New Roman';
+        color: grey;
+        font-size: 30px;
+    }
+
+    #img {
+        display: block;
+        padding-top: 60px;
+        padding-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+    }
+
+    #pN {
+        padding-left: 50px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 9%;
+    }
+
+    #bottom {
+        font-family: Arial;
+        padding-bottom: 20px;
+        width: max-content;
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+    }
+
+    #line {
+        padding-left: 50px;
+        padding-bottom: 20px;
+        padding-right: 50px;
+    }
+</style>
+
+<body>
+    <div id="img">
+        <img style="height: 25px"
+            src="https://static.wixstatic.com/media/2460f4_0fe0a6ceccfa4b0791c8b0f0dba9add3~mv2.png/v1/fill/w_175,h_27,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2460f4_0fe0a6ceccfa4b0791c8b0f0dba9add3~mv2.png">
+    </div>
+
+    <div id="top" style="text-align: center">
+        <p>User Details</p>
+    </div>
+
+    <div id="pN">
+        <p style="flex-basis: 30%;">Phone number</p>
+        <p style="color: gray;">+60</p>
+        <p style="flex-basis: 70%; color: gray;" id="phone-no"></p>
+    </div>
+
+    <div id="pN">
+        <p style="flex-basis: 30%;">Name</p>
+        <p style="flex-basis: 70%; color: gray;" id="name"></p>
+    </div>
+
+
+    <div id="pN">
+        <p style="flex-basis: 30%">Birthday</p>
+        <p style="flex-basis: 14%; color: gray;" id="day"></p>
+        <p style="flex-basis: 14%; color: gray;">/</p>
+        <p style="flex-basis: 14%; color: gray;" id="month"></p>
+        <p style="flex-basis: 14%; color: gray;">/</p>
+        <p style="flex-basis: 14%; color: gray;" id="year"></p>
+    </div>
+
+    <div id="pN">
+        <p style="flex-basis: 30%">Email</p>
+        <p style="flex-basis: 70%; color: gray;" id="email" size="30"></p>
+    </div>
+
+    <div id="line" style="text-align: center;">
+        <button onclick="location.href='index.html'">Back to First Page</button>
+        <hr>
+    </div>
+    <div id="bottom">
+        <p style="color: gray;">Powered by <a href="https://www.mulahrewards.com/about">MulahRewards.com</a></p>
+    </div>
+    <script>
+
+        const phoneNo = localStorage.getItem('phone-no');
+        const username = localStorage.getItem('username');
+        const day = localStorage.getItem('day');
+        const month = localStorage.getItem('month');
+        const year = localStorage.getItem('year');
+        const email = localStorage.getItem('email');
+
+        document.getElementById('phone-no').textContent = phoneNo;
+        document.getElementById('name').textContent = username;
+        document.getElementById('day').textContent = day;
+        document.getElementById('month').textContent = month;
+        document.getElementById('year').textContent = year;
+        document.getElementById('email').textContent = email;
+
+    </script>
+</body>
+
+</html>

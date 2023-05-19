@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<style>
+  body {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  #img {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+  }
+
+  #hel {
+    color: grey;
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 38%;
+  }
+
+  #che {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+
+  #mob {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+
+  button {
+    background-color: #fe6601;
+    border: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    border-radius: 30px;
+  }
+
+  #btn {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+  }
+
+  #bottom {
+    font-family: Arial;
+    padding-bottom: 20px;
+    width: max-content;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+  }
+
+  #hello {
+    letter-spacing: 2px;
+  }
+
+  #welcome {
+    letter-spacing: 2px;
+  }
+
+  #check {
+    font-family: Arial;
+    color: #fe6601;
+  }
+
+  #select {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: solid #fe6601 2px;
+  }
+
+  #phoneNo {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: solid #fe6601 2px;
+  }
+</style>
+
+<body>
+  <div id="img">
+    <img
+      src="https://static.wixstatic.com/media/2460f4_0fe0a6ceccfa4b0791c8b0f0dba9add3~mv2.png/v1/fill/w_175,h_27,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2460f4_0fe0a6ceccfa4b0791c8b0f0dba9add3~mv2.png">
+  </div>
+
+  <div id="hel">
+    <p id="hello" style="margin-bottom: 0;">Hello,</p>
+    <p id="welcome" style="margin: 0; padding-top: 0;">Welcome !</p>
+  </div>
+
+  <div id="che">
+    <b id="check">Check your loyalty points & Rewards</b>
+  </div>
+
+  <div id="app">
+    <div id="mob">
+      <select id="select">
+        <option value="+60">+60</option>
+      </select>
+      <input type="text" id="phoneNo" v-model="myInput" size="25" maxlength="25" placeholder="Enter your mobile number">
+    </div>
+
+    <form id="form">
+      <div id="btn">
+        <button id="submit" v-if="myInput==173527250" onclick="location.href='page2.html'">Check Loyalty
+          Points</button>
+        <button v-else>Check Loyalty Points</button>
+        <hr>
+      </div>
+    </form>
+  
+
+
+  <div id="bottom">
+    <p style="color: gray;">Powered by <a href="https://www.mulahrewards.com/about">MulahRewards.com</a></p>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        myInput: "",
+      }
+    })
+
+    const form = document.getElementById('form');
+    const phoneNo = document.getElementById('phoneNo');;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nameValue = name.value;
+      const phoneNoValue = phoneNo.value;
+      localStorage.clear();
+      localStorage.setItem('phone-no', phoneNoValue);
+
+    })
+  </script>
+</body>
+
+</html>

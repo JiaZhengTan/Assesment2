@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  body {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  p {
+    line-height: 0;
+  }
+
+  #img {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+  }
+
+  #reg {
+    color: grey;
+    font-size: 30px;
+    padding-right: 5%;
+  }
+
+  #details {
+    font-family: Arial;
+    padding-bottom: 10px;
+    font-size: 14px;
+    padding-right: 4%;
+  }
+
+  #name-lbl {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 12%;
+    font-size: 14px;
+  }
+
+  input[type=text] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid grey;
+  }
+
+  #warn1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: red;
+  }
+
+  button {
+    background-color: #fe6601;
+    border: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    border-radius: 30px;
+  }
+
+  #btn {
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+
+  }
+
+  #bottom {
+    font-family: Arial;
+    padding-bottom: 20px;
+    width: max-content;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+  }
+</style>
+
+<body>
+  <div id="img">
+    <img style="height: 25px"
+      src="https://static.wixstatic.com/media/2460f4_0fe0a6ceccfa4b0791c8b0f0dba9add3~mv2.png/v1/fill/w_175,h_27,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2460f4_0fe0a6ceccfa4b0791c8b0f0dba9add3~mv2.png">
+  </div>
+
+  <div id="reg">
+    <p>Registration</p>
+  </div>
+
+  <div id="details">
+    <i>Please fill up your details</i>
+  </div>
+
+  <div id="name-lbl">
+    <p>Name</p>
+  </div>
+  <div id="name-txt">
+    <input style="padding-left: 10px;" type="text" id="name" placeholder="Enter Name" size="30" maxlength="30">
+  </div>
+
+  <div id="warn1" style="padding-right: 7%;">
+    <i>*Please insert a name.</i>
+  </div>
+
+  <div id="name-lbl" style="padding-right: 11%;">
+    <p>Birthday</p>
+  </div>
+
+  <div id="bd-date">
+    <input style="text-align: center;" size="5px" maxlength="2" type="text" id="day" placeholder="DD">
+    <input style="text-align: center;" size="5px" maxlength="2" type="text" id="month" placeholder="MM">
+    <input style="text-align: center;" size="10px" maxlength="4" type="text" id="year" placeholder="YYYY">
+  </div>
+
+  <div id="warn1" style="padding-right: 6%;">
+    <i>*Please insert your birthday</i>
+  </div>
+  </div>
+
+  <div id="name-lbl">
+    <p>Email</p>
+  </div>
+
+  <div id="name-txt">
+    <input style="padding-left: 10px;" type="text" id="email" size="30" maxlength="30" placeholder="Email Address">
+  </div>
+
+  <div id="warn1" style="padding-right: 3.5%;">
+    <p>*Please insert a valid email address</p>
+  </div>
+
+  <div id="name-lbl" style="padding-right: 7.4%; margin-bottom: 1%;">
+    <input type="checkbox" id="checkbox" name="checkbox" value="no">
+    <label style="font-size: 12px; font-style: italic; color: gray;" for="checkbox">No email address</label>
+  </div>
+
+  <form id="form">
+    <div id="btn">
+      <button id="submit" onclick="location.href='page3.html'">Continue</button>
+      <hr>
+    </div>
+  </form>
+
+  <div id="bottom">
+    <p style="color: gray;">Powered by <a href="https://www.mulahrewards.com/about">MulahRewards.com</a></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const username = document.getElementById('name');
+    const day = document.getElementById('day');
+    const month = document.getElementById('month');
+    const year = document.getElementById('year');
+    const email = document.getElementById('email');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nameValue = username.value;
+      const dayValue = day.value;
+      const monthValue = month.value;
+      const yearValue = year.value;
+      const emailValue = email.value;
+
+      localStorage.setItem('username', nameValue);
+      localStorage.setItem('day', dayValue);
+      localStorage.setItem('month', monthValue);
+      localStorage.setItem('year', yearValue);
+      localStorage.setItem('email', emailValue);
+    })
+  </script>
+</body>
+
+</html>

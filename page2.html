@@ -44,10 +44,6 @@
     justify-content: center;
   }
 
-  #name-txt {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
   input[type=text] {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -115,6 +111,7 @@
   <div id="name-lbl">
     <p>Name</p>
   </div>
+  
   <div id="name-txt">
     <input style="padding-left: 10px;" type="text" id="name" placeholder="Enter Name" size="30" maxlength="30">
   </div>
@@ -165,7 +162,7 @@
   <div id="bottom">
     <p style="color: gray;">Powered by <a href="https://www.mulahrewards.com/about">MulahRewards.com</a></p>
   </div>
-
+</body>
   <script>
     const form = document.getElementById('form');
     const username = document.getElementById('name');
@@ -190,6 +187,6 @@
       localStorage.setItem('email', emailValue);
     })
   </script>
-</body>
+
 
 </html>
